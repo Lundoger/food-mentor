@@ -1,0 +1,56 @@
+//====================================================================================================
+.top-bar {
+	@include adaptiveValue("padding-top", 15, 10, 0, 360, 320);
+	@include adaptiveValue("padding-bottom", 15, 10, 0, 360, 320);
+	&--disabled {
+		opacity: 0.3;
+		pointer-events: none;
+		cursor: default;
+	}
+	&__container {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 20, 15, 0, 360, 320);
+	}
+
+	&__arrow {
+		width: rem(32);
+		height: rem(32);
+		flex: 0 0 rem(32);
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__name {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+	}
+
+	&__avocado {
+		width: rem(32);
+		height: rem(32);
+		border-radius: rem(6);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__title {
+		color: $greenColor;
+		@include adaptiveValue("font-size", 18, 16, 0, 360, 320);
+		font-weight: 600;
+		letter-spacing: rem(-0.45);
+	}
+}
+
+//====================================================================================================

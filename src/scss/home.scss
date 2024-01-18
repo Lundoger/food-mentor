@@ -1,3 +1,79 @@
 //====================================================================================================
+.page {
+	margin-bottom: rem(15);
+	&__article {
+		margin-top: rem(15);
+		margin-bottom: rem(15);
+	}
+
+	&__goals {}
+}
+.article {
+	text-align: center;
+	&__container {}
+
+	&__title {
+		@include adaptiveValue("font-size", 24, 20, 0, 360, 320);
+		font-weight: 700;
+		line-height: 150%;
+		letter-spacing: rem(0.25);
+	}
+
+	&__description {
+		color: $greyColor;
+		letter-spacing: rem(0.25);
+		line-height: 172%;
+	}
+}
+.goals {
+	text-align: center;
+	&__container {}
+
+	&__title {
+		font-weight: 700;
+		line-height: 172%;
+		letter-spacing: rem(0.2);
+		margin-bottom: rem(15);
+	}
+
+	&__grid-container {
+		display: grid;
+		@include adaptiveValue("gap", 16, 10, 0, 360, 320);
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&__item {
+	}
+}
+.item-goal {
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: rem(172);
+	overflow: hidden;
+	border: rem(1) solid #E1E1E1;
+	border-radius: rem(20);
+	transition: border 0.3s ease 0s;
+	@media (any-hover: hover){
+		&:hover{
+			border: rem(1) solid $limeColor;
+		}
+	}
+	&__text {
+		text-align: left;
+		@include adaptiveValue("font-size", 17, 14, 0, 360, 320);
+		line-height: 137.5%;
+		letter-spacing: rem(0.2);
+		flex: 0 0 rem(84);
+		@include adaptiveValue("margin-left", 10, 0, 0, 360, 320);
+	}
+
+	&__icon {
+		position: absolute;
+		bottom: rem(-5);
+		right: 0;
+		flex: 1 1 auto;
+	}
+}
 
 //====================================================================================================

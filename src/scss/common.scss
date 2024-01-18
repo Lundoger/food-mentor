@@ -1,1 +1,16 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.continue-button {
+	width: 100%;
+	height: rem(50);
+	border-radius: rem(12);
+	background-color: $limeColor;
+	color: #fff;
+	font-size: rem(18);
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: rem(0.2);
+	&:disabled {
+		opacity: 0.3;
+		cursor: default;
+	}
+}

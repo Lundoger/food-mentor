@@ -1,0 +1,84 @@
+.page {
+	&__measurements {
+		@include adaptiveValue("margin-top", 90, 30, 0, 1440, 320);
+	}
+}
+.measurements {
+
+	&__container {}
+
+	&__actions {
+		position: relative;
+		border: rem(1) solid $limeColor;
+		border-radius: rem(10);
+		display: flex;
+		height: rem(32);
+		margin-bottom: rem(130);
+	}
+
+	&__button {
+		flex: 0 1 50%;
+		font-size: rem(12);
+		font-weight: 800;
+		letter-spacing: rem(2.5);
+		text-transform: uppercase;
+		color: $limeColor;
+		height: 100%;
+		transition: text-shadow 0.3s ease 0s;
+		&--active {
+			background: rgba(95, 203, 57, 0.20);
+		}
+		@media (any-hover: hover){
+			&:hover{
+				text-shadow: 0 0 rem(5) $limeColor;
+			}
+		}
+	}
+
+	&__dropdown {
+		position: absolute;
+		width: 100%;
+		top: rem(42);
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		gap: rem(10);
+	}
+
+	&__input {
+		width: 100%;
+		@include adaptiveValue("height", 64, 45, 0, 1440, 320);
+		background-color: #fff;
+		border: rem(1) solid #E1E1E1;
+		transition: border 0.3s ease 0s;
+		border-radius: rem(10);
+		padding: 0 rem(15);
+		outline-color: $limeColor;
+		&::placeholder {
+			color: $mainColor;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				border: rem(1) solid $limeColor;
+			}
+		}
+	}
+
+	&__text {
+		margin-bottom: rem(100);
+		text-align: center;
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 24, 20, 0, 360, 320);
+		font-weight: 700;
+		line-height: 1.5;
+		letter-spacing: rem(0.25);
+	}
+
+	&__description {
+		color: $greyColor;
+		line-height: 1.71;
+		letter-spacing: rem(0.25);
+	}
+}
