@@ -26,10 +26,10 @@ const MeasurementsPage = () => {
 							{metric && <Dropdown chosenSystem="metric"/>}
 						</div>
 						<div className="measurements__text">
-							<h1 className="measurements__title">Measure Yourself</h1>
+							<h1 className="measurements__title title">Measure Yourself</h1>
 							<p className="measurements__description">What are your height and body weight?</p>
 						</div>
-						<ContinueButton to={'/'} disabled={isButtonDisabled}/>
+						<ContinueButton to={'/age'} disabled={isButtonDisabled}/>
 					</div>
 				</section>
 			</main>

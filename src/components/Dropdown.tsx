@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from "../hooks/hooks";
 import { foodMentorSlice } from "../store/reducers/foodMentorSlice";
+import InputField from "./InputField";
 
 interface DropdownProps {
 	chosenSystem: string;
@@ -15,19 +16,15 @@ const Dropdown = ({ chosenSystem }: DropdownProps) => {
 
 	return (
 		<div className="measurements__dropdown">
-			<input
-				type="number"
-				className="measurements__input"
+			<InputField
 				placeholder={placeholderHeight}
 				value={height}
 				onChange={(e:React.ChangeEvent<HTMLInputElement>) => dispatch(setHeight(e.target.value))}
 			/>
-			<input
-				type="number"
-				className="measurements__input"
+			<InputField
 				placeholder={placeholderWeight}
 				value={weight}
-				onChange={(e:React.ChangeEvent<HTMLInputElement>) => dispatch(setWeight(e.target.value))}
+				onChange={(e: React.ChangeEvent<HTMLInputElement>) => dispatch(setWeight(e.target.value))}
 			/>
 		</div>
 	)

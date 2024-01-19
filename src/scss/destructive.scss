@@ -1,0 +1,53 @@
+.destructive {
+
+	&__section {}
+}
+.section-destructive {
+
+	&__container {}
+
+	&__text-block {
+		text-align: center;
+		margin-bottom: rem(15);
+	}
+
+	&__title {}
+
+	&__description {
+		color: $greenColor;
+		line-height: 172%;
+		letter-spacing: rem(0.25);
+	}
+
+	&__grid-container {
+		display: grid;
+		@include adaptiveValue("gap", 15, 10, 0, 360, 320);
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: rem(130);
+	}
+
+	&__item {}
+}
+.item-section-destructive {
+	background-color: #fff;
+	border-radius: rem(15);
+	border: rem(1) solid #e1e1e1;
+	padding: rem(12) rem(15);
+	display: flex;
+	gap: rem(10);	
+	&__icon {
+		width: rem(30);
+		height: rem(30);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__text {
+		font-size: rem(12);
+		line-height: 1.5;
+		letter-spacing: rem(0.3);
+	}
+}

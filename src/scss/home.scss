@@ -13,10 +13,6 @@
 	&__container {}
 
 	&__title {
-		@include adaptiveValue("font-size", 24, 20, 0, 360, 320);
-		font-weight: 700;
-		line-height: 150%;
-		letter-spacing: rem(0.25);
 	}
 
 	&__description {

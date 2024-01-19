@@ -8,7 +8,7 @@ const HomePage = () => {
 			<main className="page">
 				<section className="page__article article">
 					<div className="article__container">
-						<h1 className="article__title">The Goal</h1>
+						<h1 className="article__title title">The Goal</h1>
 						<p className="article__description">Focus on the health benefits you need.<br/>Balanced nutrition will let you achieve them.</p>
 					</div>
 				</section>

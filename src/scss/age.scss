@@ -1,0 +1,17 @@
+.age {
+	margin-top: rem(100);
+}
+
+.content-age {
+
+	&__container {
+	}
+
+	&__title {
+		margin-bottom: rem(15);
+	}
+
+	&__line {
+		margin-bottom: rem(15);
+	}
+}
