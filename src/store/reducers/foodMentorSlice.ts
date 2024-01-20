@@ -6,6 +6,8 @@ interface foodMentorState {
 	height: string,
 	weight: string,
 	age: string,
+	behaviorIndex:  number,
+	activity:  number,
 }
 
 const initialState: foodMentorState = {
@@ -14,6 +16,8 @@ const initialState: foodMentorState = {
 	height: '',
 	weight: '',
 	age: '',
+	behaviorIndex: -1,
+	activity: 0,
 }	
 
 export const foodMentorSlice = createSlice({
@@ -36,6 +40,12 @@ export const foodMentorSlice = createSlice({
 		},
 		setAge(state, action: PayloadAction<string>) {
 			state.age = action.payload
+		},
+		setBehavior(state, action: PayloadAction<number>) {
+			state.behaviorIndex = action.payload 
+		},
+		setActivity(state, action: PayloadAction<number>) {
+			state.activity = action.payload 
 		},
 	}
 })

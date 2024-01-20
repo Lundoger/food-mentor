@@ -1,20 +1,17 @@
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import avocadoLogo from '../assets/avocado-logo.png'
 import classNames from 'classnames'
 
-interface TopBarProps {
-	disabled: boolean,
-}
-
-const TopBar = ({disabled}: TopBarProps) => {
+const TopBar = () => {
 	const navigate = useNavigate()
+	const { pathname } = useLocation()
 
 	const handleGoBack = () => {
 		navigate(-1)
 	}
 
 	return (
-		<nav className={classNames('top-bar', disabled && 'top-bar--disabled')}>
+		<nav className={classNames('top-bar', pathname === '/' && 'top-bar--disabled')}>
 			<div className="top-bar__container">
 				<button onClick={handleGoBack} className="top-bar__button">
 					<div className="top-bar__arrow">

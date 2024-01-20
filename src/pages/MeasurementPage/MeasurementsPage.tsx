@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import TopBar from '../../components/TopBar'
 import ContinueButton from '../../components/ContinueButton'
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks'
@@ -15,7 +14,7 @@ const MeasurementsPage = () => {
 	const isButtonDisabled = !height || !weight
 	return (
 		<>
-			<TopBar disabled={false}/>
+			<TopBar/>
 			<main className="page">
 				<section className="page__measurements measurements">
 					<div className="measurements__container">

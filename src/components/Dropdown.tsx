@@ -19,12 +19,12 @@ const Dropdown = ({ chosenSystem }: DropdownProps) => {
 			<InputField
 				placeholder={placeholderHeight}
 				value={height}
-				onChange={(e:React.ChangeEvent<HTMLInputElement>) => dispatch(setHeight(e.target.value))}
+				onChange={e => dispatch(setHeight(e.target.value))}
 			/>
 			<InputField
 				placeholder={placeholderWeight}
 				value={weight}
-				onChange={(e: React.ChangeEvent<HTMLInputElement>) => dispatch(setWeight(e.target.value))}
+				onChange={e => dispatch(setWeight(e.target.value))}
 			/>
 		</div>
 	)

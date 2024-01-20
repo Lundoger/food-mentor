@@ -23,21 +23,28 @@
 		display: grid;
 		@include adaptiveValue("gap", 15, 10, 0, 360, 320);
 		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: 1fr;
 		margin-bottom: rem(130);
 	}
 
 	&__item {}
 }
 .item-section-destructive {
+	text-align: left;
 	background-color: #fff;
 	border-radius: rem(15);
-	border: rem(1) solid #e1e1e1;
+	border: rem(2) solid #e1e1e1;
 	padding: rem(12) rem(15);
 	display: flex;
-	gap: rem(10);	
+	gap: rem(10);
+	transition: border 0.3s ease 0s;
+	&--active {
+		border: rem(2) solid $limeColor;
+	}
 	&__icon {
 		width: rem(30);
 		height: rem(30);
+		flex: 0 0 rem(30);
 		img {
 			width: 100%;
 			height: 100%;

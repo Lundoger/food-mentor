@@ -4,7 +4,7 @@ import TopBar from "../../components/TopBar"
 const HomePage = () => {
 	return (
 		<>
-			<TopBar disabled={true}/>
+			<TopBar/>
 			<main className="page">
 				<section className="page__article article">
 					<div className="article__container">
